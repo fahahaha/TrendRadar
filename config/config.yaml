@@ -24,7 +24,7 @@ crawler:
 #   • 适用场景：避免重复信息干扰
 
 report:
-  mode: "daily" # 可选: "daily"|"incremental"|"current"
+  mode: "incremental" # 可选: "daily"|"incremental"|"current"
   rank_threshold: 5 # 排名高亮阈值
 
 notification:
@@ -35,7 +35,7 @@ notification:
   feishu_message_separator: "━━━━━━━━━━━━━━━━━━━" # feishu 消息分割线
 
   silent_push:
-    enabled: true  # 是否启用静默推送模式，如果 true，则启用
+    enabled: false  # 是否启用静默推送模式，如果 true，则启用
     # 因为我们白嫖的 github 服务器执行时间不稳定，所以时间范围要根据实际尽可能大一点，留足 2 小时
     # 如果你想寻求稳定的按时的推送，建议通过 docker 部署在个人的服务器上
     time_range:
